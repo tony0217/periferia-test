@@ -79,13 +79,7 @@ http://localhost:3000/api/shoppings/orders
 http://localhost:3000/api/products?limit=[numero]&offset=[numero] ej:http://localhost:3000/api/products?limit=2&offset=1
 ```
 
-para mas informacion leer la documentacion
+Más información leer la documentación
 ```
-http://localhost:3000
+http://localhost:3000 (en el navegador)
 ```
-
-
-
-
-
-
