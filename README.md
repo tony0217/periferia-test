@@ -21,11 +21,12 @@ docker-compose up -d
 http://localhost:3000/api/seed
 ```
 
-8.Loguearse
+8. Loguearse
 ```
 http://localhost:3000/api/auth/login
 ```
 ```ts
+>body
 {
     "email":"test1@google.com",
     "password":"Abc123"
@@ -34,6 +35,7 @@ http://localhost:3000/api/auth/login
 
 9. Tomar el token de sesion
 ```ts
+>Response
 {
     "id": "b690ea3a-52c5-44d2-a487-3fc42d990f28",
     "email": "test1@google.com",
@@ -41,12 +43,13 @@ http://localhost:3000/api/auth/login
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2OTBlYTNhLTUyYzUtNDRkMi1hNDg3LTNmYzQyZDk5MGYyOCIsImlhdCI6MTY3MzU4MTA4NiwiZXhwIjoxNjczNTg4Mjg2fQ.iT7EpTFqNFhaCWd6qeIoF7Iev600lzSR8WHa2ejeI_M"
 }
 ```
-10. añadir el token en autorization bearer token ej:postman
-11. añadir productos al carrito (verificar los id de los productos en la DB)
+10. Añadir el token en autorization bearer token ej:postman
+11. Añadir productos al carrito (verificar los id de los productos en la DB)
 ```
 http://localhost:3000/api/shoppings
 ```
 ```ts
+>body
 {
    "cart":[
        {
@@ -61,6 +64,17 @@ http://localhost:3000/api/shoppings
    ] 
 }
 ```
+12. Crear orden
+```
+http://localhost:3000/api/shoppings
+```
+```ts
+>body
+{
+    "shoppingId":"67a869c5-7c4a-46e5-a7fc-c2da34e40314"
+}
+```
+
 
 
 
