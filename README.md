@@ -26,7 +26,7 @@ http://localhost:3000/api/seed
 http://localhost:3000/api/auth/login
 ```
 ```ts
->body
+> Body
 {
     "email":"test1@google.com",
     "password":"Abc123"
@@ -35,7 +35,7 @@ http://localhost:3000/api/auth/login
 
 9. Tomar el token de sesion
 ```ts
->Response
+> Response
 {
     "id": "b690ea3a-52c5-44d2-a487-3fc42d990f28",
     "email": "test1@google.com",
@@ -49,7 +49,7 @@ http://localhost:3000/api/auth/login
 http://localhost:3000/api/shoppings
 ```
 ```ts
->body
+> Body
 {
    "cart":[
        {
@@ -66,13 +66,22 @@ http://localhost:3000/api/shoppings
 ```
 12. Crear orden
 ```
-http://localhost:3000/api/shoppings
+http://localhost:3000/api/shoppings/orders
 ```
 ```ts
->body
+> Body
 {
     "shoppingId":"67a869c5-7c4a-46e5-a7fc-c2da34e40314"
 }
+```
+13. todos los productos ordenados por mayor venta
+```
+http://localhost:3000/api/products?limit=[numero]&offset=[numero] ej:http://localhost:3000/api/products?limit=2&offset=1
+```
+
+para mas informacion leer la documentacion
+```
+http://localhost:3000
 ```
 
 
