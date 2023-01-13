@@ -1,4 +1,4 @@
-<p align="center">
+<p align="center" background="blue">
   <a href="http://nestjs.com/" target="blank"><img src="https://periferiaitgroup.com/wp-content/uploads/2022/09/periferia-it-corp-logo.svg" width="200" alt="Periferia Logo" /></a>
 </p>
 
