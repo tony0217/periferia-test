@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+  <a href="http://nestjs.com/" target="blank"><img src="https://periferiaitgroup.com/wp-content/uploads/2022/09/periferia-it-corp-logo.svg" width="200" alt="Periferia Logo" /></a>
 </p>
 
 
