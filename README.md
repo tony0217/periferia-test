@@ -21,7 +21,7 @@ docker-compose up -d
 http://localhost:3000/api/seed
 ```
 
-8.loguearse
+8.Loguearse
 ```
 http://localhost:3000/api/auth/login
 ```
@@ -32,7 +32,7 @@ http://localhost:3000/api/auth/login
 }
 ```
 
-9. tomar el token de sesion
+9. Tomar el token de sesion
 ```ts
 {
     "id": "b690ea3a-52c5-44d2-a487-3fc42d990f28",
@@ -41,6 +41,27 @@ http://localhost:3000/api/auth/login
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2OTBlYTNhLTUyYzUtNDRkMi1hNDg3LTNmYzQyZDk5MGYyOCIsImlhdCI6MTY3MzU4MTA4NiwiZXhwIjoxNjczNTg4Mjg2fQ.iT7EpTFqNFhaCWd6qeIoF7Iev600lzSR8WHa2ejeI_M"
 }
 ```
+10. añadir el token en autorization bearer token ej:postman
+11. añadir productos al carrito (verificar los id de los productos en la DB)
+```
+http://localhost:3000/api/shoppings
+```
+```ts
+{
+   "cart":[
+       {
+       "product":"0b699130-57e3-4bef-b174-c7af5d9ffdcd",
+       "quantity": 2
+       }, 
+       {
+       "product":"01d760de-700c-4f1b-a881-79b1bd2b2da1",
+       "quantity": 5
+       }
+
+   ] 
+}
+```
+
 
 
 
