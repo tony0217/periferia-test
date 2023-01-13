@@ -61,6 +61,9 @@ export class ProductsService {
       skip: offset,
       relations: {
         images: true,
+      },
+      order: {
+        salesNumber: "DESC"
       }
     })
 
@@ -68,6 +71,7 @@ export class ProductsService {
       ...product,
       images: product.images.map( img => img.url )
     }))
+    
   }
 
   async findOne( term: string ) {

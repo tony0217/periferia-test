@@ -1,10 +1,12 @@
-import { BeforeInsert, BeforeUpdate, Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { Order } from 'src/shoppings/entities/order.entity';
+import { Shopping } from 'src/shoppings/entities/shopping.entity';
+import { BeforeInsert, BeforeUpdate, Column, Entity, OneToMany, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Product } from '../../products/entities';
 
 
 @Entity('users')
 export class User {
-    
+
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
@@ -32,12 +34,30 @@ export class User {
     })
     roles: string[];
 
+    @Column('float', {
+        default: 0
+    })
+    spaceAvailable: number;
+
     @OneToMany(
         () => Product,
-        ( product ) => product.user
+        (product) => product.user
     )
     product: Product;
 
+    @OneToMany(
+        () => Shopping,
+        (shopping) => shopping.user,
+        // { eager: true }
+    )
+    shopping: Shopping;
+
+    @OneToMany(
+        () => Order,
+        (order) => order.user,
+        // { eager: true }
+    )
+    order: Order;
 
     @BeforeInsert()
     checkFieldsBeforeInsert() {
@@ -46,7 +66,7 @@ export class User {
 
     @BeforeUpdate()
     checkFieldsBeforeUpdate() {
-        this.checkFieldsBeforeInsert();   
+        this.checkFieldsBeforeInsert();
     }
 
 }

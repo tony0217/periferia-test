@@ -98,6 +98,17 @@ export class Product {
     images?: ProductImage[];
 
 
+    @ApiProperty({
+        example: 10,
+        description: 'Product sales',
+        default: 0
+    })
+    @Column('int', {
+        default: 0
+    })
+    salesNumber: number;
+    
+
     @ManyToOne(
         () => User,
         ( user ) => user.product,

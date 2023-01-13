@@ -18,8 +18,6 @@ import { ValidRoles } from './interfaces';
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
-
-
   @Post('register')
   createUser(@Body() createUserDto: CreateUserDto ) {
     return this.authService.create( createUserDto );
@@ -64,31 +62,31 @@ export class AuthController {
 
   // @SetMetadata('roles', ['admin','super-user'])
 
-  @Get('private2')
-  @RoleProtected( ValidRoles.superUser, ValidRoles.admin )
-  @UseGuards( AuthGuard(), UserRoleGuard )
-  privateRoute2(
-    @GetUser() user: User
-  ) {
+  // @Get('private2')
+  // @RoleProtected( ValidRoles.superUser, ValidRoles.admin )
+  // @UseGuards( AuthGuard(), UserRoleGuard )
+  // privateRoute2(
+  //   @GetUser() user: User
+  // ) {
 
-    return {
-      ok: true,
-      user
-    }
-  }
+  //   return {
+  //     ok: true,
+  //     user
+  //   }
+  // }
 
 
-  @Get('private3')
-  @Auth( ValidRoles.admin )
-  privateRoute3(
-    @GetUser() user: User
-  ) {
+  // @Get('private3')
+  // @Auth( ValidRoles.admin )
+  // privateRoute3(
+  //   @GetUser() user: User
+  // ) {
 
-    return {
-      ok: true,
-      user
-    }
-  }
+  //   return {
+  //     ok: true,
+  //     user
+  //   }
+  // }
 
 
 

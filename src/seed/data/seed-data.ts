@@ -20,6 +20,7 @@ interface SeedUser {
     email:    string;
     fullName: string;
     password: string;
+    spaceAvailable: number;
     roles:     string[];
 }
 
@@ -37,12 +38,14 @@ export const initialData: SeedData = {
             email: 'test1@google.com',
             fullName: 'Test One',
             password: bcrypt.hashSync( 'Abc123', 10 ),
+            spaceAvailable: 250,
             roles: ['admin']
         },
         {
             email: 'test2@google.com',
             fullName: 'Test Two',
             password: bcrypt.hashSync( 'Abc123', 10 ),
+            spaceAvailable: 500,
             roles: ['user','super']
         }
     ],
